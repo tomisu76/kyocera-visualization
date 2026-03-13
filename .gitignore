@@ -1,0 +1,17 @@
+# Temporary and log files
+*.txt
+*.log
+dir_output.txt
+netstat_check.txt
+ports.txt
+test_*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# System
+.vscode/
+.DS_Store
+Thumbs.db

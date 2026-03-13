@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prípad Skačany | GRAFICKÁ ANALÝZA</title>
+  <meta name="description"
+    content="Interaktívna vyšetrovacia vizualizácia majetkového sporu o reštituované pozemky v obci Skačany.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><span class="nav-title">⚖ Prípad Skačany</span></li>
+      <li><a href="#dashboard" class="active">Prehľad</a></li>
+      <li><a href="#restitution-visual">Grafika reštitúcie</a></li>
+      <li><a href="#graph">Vzťahy</a></li>
+      <li><a href="#timeline">Časová os</a></li>
+      <li><a href="#evidence">Dôkazy</a></li>
+      <li><a href="#laws">Zákony</a></li>
+      <li><a href="#flowchart">Inštitúcie</a></li>
+      <li><a href="#property">Pozemky</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== DASHBOARD ===== -->
+  <section id="dashboard">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Prípad Skačany – Kompletná analýza v3</h2>
+      <p class="section-sub animate d1">Majetkový spor o reštituované pozemky parc.č. 3893/1, 3895/1, 3895/2 v k.ú.
+        Skačany</p>
+
+      <div class="stats">
+        <div class="stat-card red animate d1">
+          <div class="stat-number red">74</div>
+          <div class="stat-label">Rokov od znárodnenia (1951–2025)</div>
+        </div>
+        <div class="stat-card orange animate d2">
+          <div class="stat-number orange">300 000+ €</div>
+          <div class="stat-label">Trhová hodnota pozemkov</div>
+        </div>
+        <div class="stat-card blue animate d3">
+          <div class="stat-number blue">32</div>
+          <div class="stat-label">Zapojených osôb a inštitúcií</div>
+        </div>
+        <div class="stat-card purple animate d4">
+          <div class="stat-number purple">4</div>
+          <div class="stat-label">Vyšetrovacie spisy (ORP-184, 27, 54, 58)</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat-card green animate d1">
+          <div class="stat-number green" style="font-size:1.3rem">1× VYHOVENÉ</div>
+          <div class="stat-label">Čepko 15.9.2024 – potom IGNOROVANÉ</div>
+        </div>
+        <div class="stat-card red animate d2">
+          <div class="stat-number red" style="font-size:1.3rem">7× ODMIETNUTÉ</div>
+          <div class="stat-label">Polícia 4×, prokuratúra 3×</div>
+        </div>
+        <div class="stat-card orange animate d3">
+          <div class="stat-number orange" style="font-size:1.5rem">4 078 m²</div>
+          <div class="stat-label">Celková výmera sporných pozemkov</div>
+        </div>
+        <div class="stat-card blue animate d4">
+          <div class="stat-number blue" style="font-size:1.3rem">10+ zákonov</div>
+          <div class="stat-label">Porušených zákonov a predpisov</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESTITUTION FLOW VISUAL ===== -->
+  <section id="restitution-visual">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Grafický priebeh reštitúcie v Skačanoch</h2>
+      <p class="section-sub animate d1">Detailná chronologická mapa právneho stavu, blokácií a nelegálnych prevodov
+        (1951–2025)</p>
+
+      <div class="hex-nexus-container animate d2">
+        <div class="timeline-visual-wrapper">
+          <div class="nexus-axis"></div>
+          <div class="hex-nexus">
+
+            <!-- 1952 -->
+            <div class="hex-node hex-fraud key-point">
+              <a href="#tl-0" class="hex-shape">
+                <span class="hex-year">1952</span>
+                <div class="hex-title">NÁSTUP ŠTÁTU</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-2">
+                <div class="info-line"></div>
+                <p>Znárodnenie podstaty podľa dekrétov. Vlastníkom sa stal Čs. štát, užívateľom JRD Skačany.</p>
+              </div>
+            </div>
+
+            <!-- 1991-1992 -->
+            <div class="hex-node hex-legal">
+              <a href="#t2" class="hex-shape">
+                <span class="hex-year">1991-92</span>
+                <div class="hex-title">REŠTITÚCIA</div>
+              </a>
+              <div class="hex-info pos-top lvl-1">
+                <div class="info-line"></div>
+                <p>Schválené dohody o vydaní nehnuteľností podľa z. č. 87/1991 Zb. registrované notárom.</p>
+              </div>
+            </div>
+
+            <!-- 1997 -->
+            <div class="hex-node hex-legal">
+              <a href="#t_gp" class="hex-shape">
+                <span class="hex-year">1997</span>
+                <div class="hex-title">REGISTRÁCIA GP</div>
+              </a>
+              <div class="hex-info pos-top lvl-3">
+                <div class="info-line"></div>
+                <p>Vytvorený a schválený geometrický plán (č. 156/97). Kataster potvrdil prevzatie a identifikáciu parciel.</p>
+              </div>
+            </div>
+
+            <!-- 2005 -->
+            <div class="hex-node hex-legal">
+              <a href="#t5" class="hex-shape">
+                <span class="hex-year">2005</span>
+                <div class="hex-title">BLOKÁCIA</div>
+              </a>
+              <div class="hex-info pos-top lvl-2">
+                <div class="info-line"></div>
+                <p>Oficiálna výzva OÚ Prievidza na zastavenie nezákonných prevodov reštituovaných pozemkov.</p>
+              </div>
+            </div>
+
+            <!-- 2006-2009 -->
+            <div class="hex-node hex-fraud">
+              <a href="#t7" class="hex-shape">
+                <span class="hex-year">2006-09</span>
+                <div class="hex-title">PODVOD ROEP</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-1">
+                <div class="info-line"></div>
+                <p>Zápis duplicitného vlastníctva v ROEP na neexistujúci subjekt "Viestová" cez sfalšované dokumenty.</p>
+              </div>
+            </div>
+
+            <!-- 2018-2020 -->
+            <div class="hex-node hex-fraud">
+              <a href="#t11" class="hex-shape">
+                <span class="hex-year">2018-20</span>
+                <div class="hex-title">ODPREDAJ 1</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-2">
+                <div class="info-line"></div>
+                <p>Obec Skačany ignoruje blokáciu a odpredáva časť parciel p. Krajčovi (v rozpore so zákonom).</p>
+              </div>
+            </div>
+
+            <!-- 2021 -->
+            <div class="hex-node hex-fraud">
+              <a href="#t11" class="hex-shape">
+                <span class="hex-year">2021</span>
+                <div class="hex-title">ODPREDAJ 2</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-3">
+                <div class="info-line"></div>
+                <p>Ďalší odpredaj susedovi starostu (Stanislav). Pokus o "očistenie" nadobudnutia vlastníctva.</p>
+              </div>
+            </div>
+
+            <!-- 2021 -->
+            <div class="hex-node hex-fraud">
+              <a href="#t_waste" class="hex-shape">
+                <span class="hex-year">2021</span>
+                <div class="hex-title">ODPAD</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-1">
+                <div class="info-line"></div>
+                <p>Navážka stavebného odpadu na cudzom pozemku. Enviro-kriminalita s vyčíslenou škodou 25k EUR.</p>
+              </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="hex-node hex-legal">
+              <a href="#t14" class="hex-shape">
+                <span class="hex-year">2022</span>
+                <div class="hex-title">POTVRDENIE</div>
+              </a>
+              <div class="hex-info pos-top lvl-1">
+                <div class="info-line"></div>
+                <p>Okresný úrad definitívne potvrdil: Rodina Struhárová sú jediní legitímni reštituenti a vlastníci.</p>
+              </div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="hex-node hex-fraud key-point">
+              <a href="#t_transfer" class="hex-shape">
+                <span class="hex-year">2025</span>
+                <div class="hex-title">VADA</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-2">
+                <div class="info-line"></div>
+                <p>Marenie spravodlivosti prokuratúrou. Procesná manipulácia a zamietanie dôkazov reštituentov.</p>
+              </div>
+            </div>
+
+            <!-- 2025 End -->
+            <div class="hex-node hex-fraud">
+              <a href="#t_deadline" class="hex-shape">
+                <span class="hex-year">KONIEC 25</span>
+                <div class="hex-title">PREMLČANIE</div>
+              </a>
+              <div class="hex-info pos-bottom lvl-3">
+                <div class="info-line"></div>
+                <p>Kritický termín. Ak orgány nebudú konať, hrozí premlčanie trestných činov a strata práv.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal-summary animate d3">
+        <p><strong>Závery analýzy:</strong> Reštitúcia podľa zákona 87/1991 Zb. je <strong>UKONČENÁ a PLATNÁ</strong> od
+          roku 1991. Všetky kroky katastra a obce po tomto dátume (najmä prevody 2006, 2009, 2021) sú v priamom rozpore
+          so zákonom a judikatúrou Najvyššieho súdu SR.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NETWORK GRAPH ===== -->
+  <section id="graph">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Mapa vzťahov – 32 účastníkov</h2>
+      <p class="section-sub animate d1">Force-directed layout • Ťahajte uzly • Hover = detail • Hrúbka hrán = závažnosť
+      </p>
+      <div id="graph-container" style="height:850px" class="animate d2">
+        <canvas id="graph-canvas"></canvas>
+        <div id="graph-tooltip" class="node-tooltip"></div>
+      </div>
+      <div class="legend animate d3">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#ef4444"></div> Poškodení (3)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#f97316"></div> Podozriví (9)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#eab308"></div> Kupci (2)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#3b82f6"></div> Polícia (6)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#22c55e"></div> Pozitívni aktéri (3)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#a855f7"></div> Prokuratúra (4)
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#06b6d4"></div> Inštitúcie / Iné (7)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section id="timeline">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Chronológia prípadu (1951–2025)</h2>
+      <p class="section-sub animate d1">24 kľúčových udalostí od znárodnenia po vyčerpanie opravných prostriedkov</p>
+      <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <!-- ===== EVIDENCE ===== -->
+  <section id="evidence">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Kľúčové dôkazy a zistenia</h2>
+      <p class="section-sub animate d1">Konkrétne fakty z dokumentov, ktoré OČTK nevyhodnotili alebo ignorovali</p>
+
+      <div id="evidence-grid">
+        <div class="evidence-card pulse-red" style="border-left:3px solid var(--red)">
+          <h3 style="color:#ef4444">🔴 Sfalšované hospodárske zmluvy</h3>
+          <p>Mlyny a cestovinárne mali hospodársku zmluvu s ONV Topoľčany o <strong>nadbytočnom materiáli</strong> –
+            stroje,
+            zariadenia, remenice. Barániková zmluvu <strong>sfalšovala</strong> – dopísala reštituované pozemky do
+            prílohy
+            „základné prostriedky", kde mali byť len stroje. Obidva doklady (originál a sfalšovaný) boli predložené
+            vyšetrovateľovi.</p>
+        </div>
+        <div class="evidence-card pulse-orange" style="border-left:3px solid var(--orange)">
+          <h3 style="color:#f97316">🟠 Pečiatka katastra z roku 2005</h3>
+          <p>Barániková tvrdila vyšetrovateľovi Terlandovi: „<em>dohody nikdy nedostala</em>". Struhár predložil doklad
+            s
+            <strong>pečiatkou katastra</strong> o prevzatí v 2005. Terlanda na to „<strong>zabudol</strong>" a
+            Baránikovej
+            to pri výpovedi neukázal.
+          </p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--orange)">
+          <h3 style="color:#f97316">🟠 Osobný záujem starostu + rodinné väzby</h3>
+          <p>Pozemok starostu Kližana <strong>SUSEDÍ</strong> s reštituovaným. Odpredával časti kamarátom a susedom.
+            Jeho
+            <strong>švagriná Daša Kližanová</strong> pracuje na Obecnom úrade. Starosta je vo funkcii <strong>2. volebné
+              obdobie</strong>.
+          </p>
+        </div>
+        <div class="evidence-card pulse-purple" style="border-left:3px solid var(--purple)">
+          <h3 style="color:#a855f7">🟣 Prokurátor Masár – osobný vzťah s kupcom</h3>
+          <p>Vedúci prokuratúry JUDr. Masár počas zápisnice <strong>priznal</strong>: „<em>veľmi dobre sa pozná s
+              Martinom
+              Krajčom, pozná jeho manželku a rodinu, navštevujú sa</em>". Napriek tomu <strong>nič neurobil</strong>.
+          </p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--blue)">
+          <h3 style="color:#3b82f6">🔵 Rozdelenie dôkazov – NAKA vs Inšpekcia</h3>
+          <p>Polícia <strong>roztriedila dôkazy</strong>: časť NAKA, časť Inšpekcia, časť <strong>ZATAJILA</strong>. Ani
+            NAKA ani Inšpekcia nemohli vyšetriť – nemali <strong>všetky dôkazy</strong>. „Stačí aby chýbal jeden
+            dôležitý
+            doklad."</p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--green)">
+          <h3 style="color:#22c55e">🟢 Rozsudok Najvyššieho súdu SR</h3>
+          <p><strong>sp.zn. IM Obdo V16/2006</strong> z 26.3.2009: „<em>Platnosť právneho úkonu možno posudzovať len so
+              zreteľom na okolnosti v čase urobenia. Právny úkon, ktorý v čase zodpovedal zákonným požiadavkám, sa
+              nemôže
+              dodatočne stať neplatným.</em>" → Dohody z 1991-92 sú NENAPADNUTEĽNÉ.</p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--yellow)">
+          <h3 style="color:#eab308">🟡 Zavádzajúca právna analýza JUDr. Dolného</h3>
+          <p>Analýza z 11.6.2018: Dolný v nej <strong>priznal</strong>, že reštitúcia nie je ukončená – no napriek tomu
+            uvádzal poslancov do omylu. Obec ju <strong>4 mesiace odmietala vydať</strong> (advokát nedal súhlas).
+            Klamal,
+            že Struhár nepredložil „žiadne právne relevantné listiny".</p>
+        </div>
+        <div class="evidence-card pulse-red" style="border-left:3px solid var(--red)">
+          <h3 style="color:#ef4444">🔴 Neoprávnené a neplatné prepisy na Katastri</h3>
+          <p>Kataster (Ing. Barániková) priamo <strong>nerešpektoval súdny zákaz</strong> (rozhodnutie OPU 515/2005) a
+            <strong>zák. 87/1991 Zb. § 9</strong> a neoprávnene prepísal vlastníctvo pozemkov na <strong>Dávida
+              Stanielavu,
+              Martina Krajcu</strong> a dokonca aj <strong>Slovenský vodohospodársky podnik (SVP)</strong>. Tieto
+            prevody
+            sú
+            od začiatku absolútne neplatné.
+          </p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--red)">
+          <h3 style="color:#ef4444">🔴 Sfalšovaný Protokol od obce</h3>
+          <p>Obec po polroku vydala Protokol z 15.12.2009 – ale <strong>len 2 riadky</strong>, ostatný text VYMAZALA.
+            Priestupok podľa §21a infozákona (pokuta do 1650€). Hlavná kontrolórka na to bola upozornená –
+            <strong>odignorovala</strong>.
+          </p>
+        </div>
+
+        <!-- NOVÉ PRIDANÉ KĽÚČOVÉ DÔKAZY -->
+        <div class="evidence-card" style="border-left:3px solid var(--green)">
+          <h3 style="color:#22c55e">🟢 Zákaz prevodu OPÚ Prievidza (Leitman)</h3>
+          <p>Rozhodnutie OPU 515/2005-1905-1 vydané Ing. Leitmanom jasne hovorí: <strong>ZÁKAZ PREVODU</strong> (podľa
+            §4
+            ods. 2 zák. 503/2003 Z.z.). „Takýto úkon je <strong>NEPLATNÝ</strong>." Napriek tomu kataster v roku 2006
+            pozemok vďaka Baránikovej previedol.</p>
+        </div>
+        <div class="evidence-card pulse-red" style="border-left:3px solid var(--red)">
+          <h3 style="color:#ef4444">🔴 Prevod na neexistujúci úrad (ONV)</h3>
+          <p>V roku 2006 kataster a následne v roku 2009 OÚ Trenčín (Kramárová) preniesli pozemky na <strong>Okresný
+              národný
+              výbor Topoľčany</strong>. Problém je, že tento úrad bol <strong>zrušený v roku 1990</strong>! Prevod sa
+            uskutočnil na subjekt, ktorý 16 a 19 rokov vôbec neexistoval.</p>
+        </div>
+        <div class="evidence-card" style="border-left:3px solid var(--green)">
+          <h3 style="color:#22c55e">🟢 Znalecký posudok (Škoda nezodpovedá polícii)</h3>
+          <p>Znalkyňa Ing. Gažová (Posudok č. 30/2022) vyčíslila škodu na <strong>25 420,32 €</strong> (trhová hodnota
+            je
+            reálne 300 000+ €). Vyšetrovateľ Hlavačka tento posudok úplne ignoroval a úmyselne znížil škodu na
+            "minimálnu
+            malú", aby vyvliekol páchateľov z Trestného zákona.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LAWS ===== -->
+  <section id="laws">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Porušené zákony a predpisov</h2>
+      <p class="section-sub animate d1">Minimálne 10 zákonov porušených organizovanou skupinou, obcou a orgánmi činnými
+        v
+        trestnom konaní</p>
+      <table class="laws-table">
+        <thead>
+          <tr>
+            <th>Zákon</th>
+            <th>Názov</th>
+            <th>Závažnosť</th>
+            <th>Detail porušenia</th>
+          </tr>
+        </thead>
+        <tbody id="laws-container"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== FLOWCHART ===== -->
+  <section id="flowchart">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Cesta trestného oznámenia</h2>
+      <p class="section-sub animate d1">4 vyšetrovatelia, 4 spisy, 7 odmietnutí, 1 vyhovenie (ignorované)</p>
+
+      <div class="flow">
+        <div class="flow-node animate" style="border-color:#ef4444">
+          <h4 style="color:#ef4444">📋 Trestné oznámenie (2021)</h4>
+          <p>Ing. Ivan Struhár → PZ Partizánske</p>
+          <p>§326 ods.1a) TZ + §221 ods.1 TZ</p>
+          <p style="font-size:0.75rem;color:var(--muted)">ČVS: ORP-184/VYS-PE-2021</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d1" style="border-color:#3b82f6">
+          <h4>📁 OR PZ Partizánske</h4>
+          <p>Odbor kriminálnej polície, oddelenie vyšetrovania</p>
+        </div>
+
+        <!-- Leitman's decision - key reference -->
+        <div class="flow-row" style="margin:1rem 0">
+          <div class="flow-branch">
+            <div class="flow-node animate d1" style="border-color:#22c55e;background:rgba(34,197,94,0.06)">
+              <h4 style="color:#22c55e">🔒 Rozhodnutie OPÚ Prievidza (31.3.2005)</h4>
+              <p><strong>Ing. Ignác Leitman</strong> – riaditeľ OPÚ</p>
+              <div class="result approved">OPU 515/2005: ZÁKAZ prevodu – §4 ods.2 zák. 503/2003</div>
+              <p style="font-size:0.82rem;color:#22c55e">„Takýto úkon je NEPLATNÝ" → Barániková v 2006 PORUŠILA</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-arrow"></div>
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-node animate d2" style="border-color:#9ca3af">
+              <h4>PhDr. Vožňáková</h4>
+              <p>Vyšetrovateľka č.1</p>
+              <div class="result" style="color:var(--muted)">↓ ukončila pôsobenie v PZ</div>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-node animate d2" style="border-color:#f97316">
+              <h4 style="color:#f97316">npor. Mgr. Terlanda</h4>
+              <p>Vyšetrovateľ č.2</p>
+              <div class="result denied">Vypočul Baránikovú nezacielene</div>
+              <p style="font-size:0.75rem">"Zabudol" na pečiatku katastra</p>
+            </div>
+          </div>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d3" style="border-color:#ef4444">
+          <h4>Uznesenie o odmietnutí (ORP-54)</h4>
+          <p>20.8.2024 – bez dôkazov od Struhára</p>
+          <div class="result denied">✗ ODMIETOL – „duplicitné"</div>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d3 pulse-red" style="border-color:#22c55e;background:rgba(34,197,94,0.06)">
+          <h4 style="color:#22c55e">✓ kpt. Ing. Michal Čepko (15.9.2024)</h4>
+          <p>§190 ods.1 TP – VYHOVEL sťažnosti</p>
+          <div class="result approved">✓ ZRUŠIL uznesenie – sťažnosť DÔVODNÁ</div>
+          <p style="font-size:0.82rem;color:#22c55e">Nariadil: doplniť dokazovanie, vypočuť oznamovateľa</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d4" style="border-color:#ef4444">
+          <h4 style="color:#ef4444">kpt. Mgr. Martin Hlavačka</h4>
+          <p>Vyšetrovateľ č.4 – IGNOROVAL Čepka</p>
+          <div class="result denied">✗ ODMIETOL 2× (ORP-54 + ORP-58)</div>
+          <p style="font-size:0.82rem">Nevypočul Dolného, Kramárovú, Fila</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d4" style="border-color:#a855f7">
+          <h4 style="color:#a855f7">JUDr. Ľubomír Dobrík – dozor</h4>
+          <div class="result denied">✗ ZAMIETOL sťažnosti (23.7.2025)</div>
+          <p style="font-size:0.82rem">„Absentuje zavinenie" – FINÁLNE</p>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-row">
+          <div class="flow-branch">
+            <div class="flow-node animate d5" style="border-color:#a855f7">
+              <h4>KP Trenčín</h4>
+              <div class="result denied">✗ NEODŇALA</div>
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-node animate d5" style="border-color:#a855f7">
+              <h4>GP SR</h4>
+              <div class="result denied">✗ NEODŇAL</div>
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-node animate d5" style="border-color:#3b82f6">
+              <h4>KRPZ Trenčín</h4>
+              <div class="result denied">✗ NEODŇAL z PE</div>
+            </div>
+          </div>
+          <div class="flow-branch">
+            <div class="flow-node animate d5" style="border-color:#ef4444;background:rgba(239,68,68,0.06)">
+              <h4 style="color:#ef4444">JUDr. Masár – vedúci OP PE</h4>
+              <div class="result denied">⚠ KONFLIKT ZÁUJMOV</div>
+              <p style="font-size:0.82rem">Priznal osobný vzťah s kupcom Krajčom</p>
+            </div>
+          </div>
+        </div>
+        <div class="flow-arrow"></div>
+        <div class="flow-node animate d5" style="border-color:#ef4444;background:rgba(239,68,68,0.08)">
+          <h4 style="color:#ef4444;font-size:1.1rem">🚫 VŠETKY PROSTRIEDKY VYČERPANÉ</h4>
+          <p style="color:#eab308;font-weight:600;margin-top:0.5rem">→ Ústavný súd SR • Civilná žaloba • ESĽP Štrasburg
+          </p>
+        </div>
+      </div>
+  </section>
+
+  <!-- ===== PROPERTY MAP ===== -->
+  <section id="property">
+    <div class="content-wrapper">
+      <h2 class="section-title animate">Mapa prevodov pozemkov</h2>
+      <p class="section-sub animate d1">Reťaz nelegálnych prevodov od reštitúcie 1991 po súčasnosť</p>
+
+      <div class="parcels-info animate d1">
+        <div class="parcel">
+          <h4>Parcela č. 3893/1</h4>
+          <div class="area">3 233 <span class="unit">m²</span></div>
+          <div class="unit">orná pôda</div>
+        </div>
+        <div class="parcel">
+          <h4>Parcela č. 3895/2</h4>
+          <div class="area">845 <span class="unit">m²</span></div>
+          <div class="unit">nepl. plochy</div>
+        </div>
+        <div class="parcel">
+          <h4>Celkom</h4>
+          <div class="area">4 078 <span class="unit">m²</span></div>
+          <div class="unit">k.ú. Skačany</div>
+        </div>
+      </div>
+
+      <div class="prop-timeline">
+        <div class="prop-card animate d1">
+          <div class="year" style="color:var(--muted)">1951</div>
+          <div class="owner">Znárodnenie</div>
+          <div class="detail">Čs. štát → Nitrianske mlyny → Mlyny a cestovinárne š.p. Piešťany. 40 rokov v správe.</div>
+        </div>
+        <div class="prop-card animate d1">
+          <div class="year" style="color:#22c55e">1991</div>
+          <div class="owner" style="color:#22c55e">✓ Rodina Hýbalových</div>
+          <div class="detail">Reštitúcia zák. 87/1991. Dohody zaregistr. na Štátnom notárstve Topoľčany. Konštitutívny
+            charakter.</div>
+        </div>
+        <div class="prop-card animate d2">
+          <div class="year" style="color:#22c55e">2005+</div>
+          <div class="owner" style="color:#22c55e">✓ Struhárovi</div>
+          <div class="detail">Právni nástupcovia. Kúpna a darovacia zmluva. PRÁVOPLATNÍ VLASTNÍCI (OÚ Prievidza 2022).
+          </div>
+        </div>
+        <div class="prop-card animate d3">
+          <div class="year" style="color:#f97316">2006</div>
+          <div class="owner" style="color:#f97316">⚠ SPF + ONV?!</div>
+          <div class="detail">Barániková: 2 verzie ROEP! Raz SPF, raz neexistujúci ONV Topoľčany. Sfalšované zmluvy.
+          </div>
+        </div>
+        <div class="prop-card animate d4">
+          <div class="year" style="color:#ef4444">2009</div>
+          <div class="owner" style="color:#ef4444">⚠ Obec Skačany</div>
+          <div class="detail">Nezákonný protokol (Kramárová, OÚ TN). Nesprávne zák. 138/1991. Deklaratívny charakter.
+          </div>
+        </div>
+        <div class="prop-card animate d5">
+          <div class="year" style="color:#ef4444">Dnes</div>
+          <div class="owner" style="color:#ef4444">Dávid, Krajča, SVP</div>
+          <div class="detail">Obec odpredala časti susedom starostu. Všetky prevody od 1991 NEPLATNÉ (§9 zák. 87/1991).
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="text-align:center;margin-top:2rem;padding:1.5rem;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:14px;"
+        class="animate d5">
+        <p style="color:#ef4444;font-weight:700;font-size:1.05rem">⚠ Podľa zák. 87/1991 Zb. §9: VŠETKY prevody od 1991
+          sú
+          NEPLATNÉ</p>
+        <p style="color:var(--muted);margin-top:0.5rem;font-size:0.85rem">„Povinná osoba nemôže tieto veci previesť do
+          vlastníctva iného" • Protokol 2009 má len deklaratívny charakter</p>
+        <p style="color:#22c55e;margin-top:0.5rem;font-weight:600">Dohody o vydaní veci majú konštitutívny charakter –
+          všeobecná platnosť (Federálne zhromaždenie ČSFR)</p>
+      </div>
+    </div>
+  </section>
+
+  <footer
+    style="text-align:center;padding:3rem 2rem;color:var(--muted);font-size:0.78rem;border-top:1px solid var(--border);">
+    Vizualizácia prípadu Skačany v3.1 – Hlbková re-analýza • 11. marca 2026 • Na základe 6+ právnych dokumentov • 32
+    osôb,
+    24 udalostí, 10+ zákonov, 43+ väzieb
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
