@@ -511,3 +511,44 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimelinePan();
   setTimeout(initAnimations, 100); 
 });
+
+// --- THE KRAKEN'S LOCK (Security Logic) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const lockGate = document.getElementById('lock-gate');
+    const gatePass = document.getElementById('gate-pass');
+    const gateBtn = document.getElementById('gate-btn');
+    const gateError = document.getElementById('gate-error');
+    const body = document.body;
+
+    const SECRET_KEY = 'kapitan76'; // Default password
+
+    const unlock = () => {
+        body.classList.remove('is-locked');
+        body.classList.add('unlocked');
+        setTimeout(() => {
+            lockGate.style.display = 'none';
+        }, 1000);
+        localStorage.setItem('kraken_session', 'active_' + Date.now());
+    };
+
+    // Check existing session
+    if (localStorage.getItem('kraken_session')) {
+        unlock();
+    }
+
+    const checkPass = () => {
+        if (gatePass.value === SECRET_KEY) {
+            unlock();
+        } else {
+            gateError.classList.remove('hidden');
+            gatePass.style.borderColor = 'var(--fraud-red)';
+            gatePass.classList.add('shake');
+            setTimeout(() => gatePass.classList.remove('shake'), 400);
+        }
+    };
+
+    gateBtn.addEventListener('click', checkPass);
+    gatePass.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') checkPass();
+    });
+});

@@ -15,7 +15,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="is-locked">
+
+  <!-- ===== THE KRAKEN'S LOCK (Security Overlay) ===== -->
+  <div id="lock-gate">
+    <div class="lock-box animate">
+      <div class="lock-icon">🔒</div>
+      <h1>PRÍSTUP ZAMKNUTÝ</h1>
+      <p>Tento vizualizačný terminál je chránený. Zadajte prístupový kód.</p>
+      <div class="input-group">
+        <input type="password" id="gate-pass" placeholder="Prístupový kód..." autocomplete="off">
+        <button id="gate-btn">VSTÚPIŤ</button>
+      </div>
+      <div id="gate-error" class="hidden">CHYBNÝ KÓD. PRÍSTUP ZAMIETNUTÝ.</div>
+    </div>
+  </div>
+
+  <div id="analyst-deck">
 
   <nav>
     <ul>
@@ -591,6 +607,7 @@
       </div>
     </div>
   </section>
+</div> <!-- End analyst-deck -->
 
   <footer
     style="text-align:center;padding:3rem 2rem;color:var(--muted);font-size:0.78rem;border-top:1px solid var(--border);">
